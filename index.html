@@ -16,13 +16,20 @@
     <title>QR Code Generator</title>
   </head>
   <body>
-    <h1>Generate Your Own QR Code! <i class="fa-solid fa-qrcode"></i></h1>
+    <h1>Generate A Colorful QR Code! <i class="fa-solid fa-qrcode"></i></h1>
     <form id="qr-form" action="">
       <label id="form-label" for="form-input"
-        >Enter some text to make into a QR code</label
+        >Enter some text to encode in a QR code:</label
       >
       <input id="form-input" type="text" />
-      <button id="form-button" type="submit">Create a QR code</button>
+      <label for="color-input">Enter a primary color:</label>
+      <input type="color" name="color-input" id="color-input" />
+      <label for="bgcolor-input">Enter a background color:</label>
+      <input type="color" name="bgcolor-input" id="bgcolor-input" />
+      <label for="size-input">Enter a size:</label>
+      <input type="number" name="size-input" id="size-input" value="400" />
+
+      <button id="form-button" type="submit">Create my QR code</button>
     </form>
 
     <img id="qr-code" />
