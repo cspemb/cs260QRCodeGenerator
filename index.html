@@ -16,23 +16,33 @@
     <title>QR Code Generator</title>
   </head>
   <body>
-    <h1>Generate A Colorful QR Code! <i class="fa-solid fa-qrcode"></i></h1>
+    <h1>
+      <i class="rainbow-qr fa-solid fa-qrcode"></i>
+      Generate A Colorful QR Code!
+      <i class="rainbow-qr fa-solid fa-qrcode"></i>
+    </h1>
     <form id="qr-form" action="">
       <label id="form-label" for="form-input"
         >Enter some text to encode in a QR code:</label
       >
-      <input id="form-input" type="text" />
-      <label for="color-input">Enter a primary color:</label>
-      <input type="color" name="color-input" id="color-input" />
-      <label for="bgcolor-input">Enter a background color:</label>
-      <input type="color" name="bgcolor-input" id="bgcolor-input" />
+      <input id="form-input" type="text" minlength="1" />
+      <div class="color-wrapper">
+        <label for="color-input">Enter a primary color:</label>
+        <input type="color" name="color-input" id="color-input" />
+        <label for="bgcolor-input">Enter a background color:</label>
+        <input type="color" name="bgcolor-input" id="bgcolor-input" />
+
+        <p>Be sure there's enough contrast!</p>
+      </div>
       <label for="size-input">Enter a size:</label>
       <input type="number" name="size-input" id="size-input" value="400" />
 
       <button id="form-button" type="submit">Create my QR code</button>
     </form>
 
-    <img id="qr-code" />
+    <div id="img-wrapper">
+      <img id="qr-code" />
+    </div>
 
     <footer>
       <a href="https://github.com/cspemb/cs260QRCodeGenerator"

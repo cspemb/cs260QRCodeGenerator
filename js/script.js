@@ -1,8 +1,8 @@
-const MAX_QUERY_LEN = 50;
+const MAX_QUERY_LEN = 75;
 document.getElementById("form-input").maxLength = MAX_QUERY_LEN;
 document.getElementById(
   "form-input"
-).placeholder = `Max length of ${MAX_QUERY_LEN} characters`;
+).placeholder = `Max ${MAX_QUERY_LEN} chars`;
 
 const colorInput = document.getElementById("color-input");
 const bgInput = document.getElementById("bgcolor-input");
@@ -56,6 +56,7 @@ button.addEventListener("click", async (e) => {
     const qrCode = document.getElementById("qr-code");
     qrCode.src = objectURL;
     qrCode.alt = `QR code for ${query} with color: ${color}, bg: ${bg}, and size: ${size}`;
+    qrCode.scrollIntoView({ behavior: "smooth", block: "center" });
   } catch (e) {
     console.error(e);
   }
@@ -103,3 +104,13 @@ function rgbToHex(rgb) {
     split[2]
   )}`;
 }
+
+colorInput.addEventListener("input", () => {
+  console.log(button.style.color);
+  button.style.color = colorInput.value;
+  console.log(button.style.color);
+});
+
+bgInput.addEventListener("input", () => {
+  button.style.backgroundColor = bgInput.value;
+});
