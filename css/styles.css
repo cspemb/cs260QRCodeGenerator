@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+:root {
+  --dark-color: black;
+  --light-color: whitesmoke;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+body.darkTheme {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}

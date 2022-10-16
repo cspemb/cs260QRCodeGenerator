@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://kit.fontawesome.com/93b8059d47.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/script.js"></script>
+
+    <title>QR Code Generator</title>
+  </head>
+  <body>
+    <h1>Generate Your Own QR Code! <i class="fa-solid fa-qrcode"></i></h1>
+    <form id="qr-form" action="">
+      <label id="form-label" for="form-input"
+        >Enter some text to make into a QR code</label
+      >
+      <input id="form-input" type="text" />
+      <button id="form-button" type="submit">Create a QR code</button>
+    </form>
+
+    <img id="qr-code" />
+  </body>
+</html>
